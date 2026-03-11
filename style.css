@@ -1,0 +1,274 @@
+:root {
+    --primary-color: #00d4ff;
+    --dark-bg: #000000;
+    --card-bg: #111111;
+    --text-white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; background: rgba(0,0,0,0.9);
+    position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid #222;
+}
+.navbar ul { display: flex; list-style: none; }
+.navbar ul li { margin-left: 20px; }
+.navbar ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+.navbar ul li a:hover { color: var(--primary-color); }
+
+/* Hero Principal (Split) */
+.hero { height: 80vh; display: flex; padding-top: 80px; }
+.hero-split { display: flex; width: 100%; }
+.hero-image { flex: 1; overflow: hidden; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-text { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.hero-text h1 { font-size: 3rem; margin-bottom: 20px; }
+
+/* Hero Interno */
+.hero-small { height: 30vh; display: flex; align-items: center; justify-content: center; background: #0a0a0a; border-bottom: 2px solid var(--primary-color); padding-top: 80px; }
+
+/* Botón */
+.btn-primary {
+    display: inline-block; background: var(--primary-color); color: #000;
+    padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px; width: fit-content;
+}
+
+/* Grid y Tarjetas */
+.container { padding: 80px 8%; max-width: 1400px; margin: auto; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.card-materia { 
+    background: var(--card-bg); border: 1px solid #222; padding: 40px; min-height: 250px;
+    text-decoration: none; color: white; border-radius: 12px; transition: 0.4s;
+}
+.card-materia:hover { border-color: var(--primary-color); transform: translateY(-10px); }
+.overlay h3 { color: var(--primary-color); margin-bottom: 10px; }
+
+/* Secciones Internas */
+.grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0; }
+.column h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1rem; }
+.column ul { padding-left: 20px; color: #ccc; }
+.evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.img-evidencia { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 1px solid #333; }
+.evidence-item p { text-align: center; font-size: 0.8rem; margin-top: 10px; color: #777; }
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA MARKETING
+   ========================================= */
+
+/* Hero con degradado para legibilidad */
+.hero-small { 
+    height: 35vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    border-bottom: 2px solid var(--primary-color); 
+    padding-top: 80px; 
+    text-align: center;
+}
+
+/* Títulos de sección con acento lateral */
+.section-title { 
+    color: var(--primary-color); 
+    margin-bottom: 40px; 
+    font-size: 2rem; 
+    border-left: 4px solid var(--primary-color); 
+    padding-left: 15px; 
+}
+
+/* Organización de Actividades y Habilidades en 2 columnas */
+.grid-info { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    margin-bottom: 30px; 
+}
+
+.column h3 { 
+    color: var(--primary-color); 
+    margin-bottom: 15px; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+}
+
+.column ul { 
+    list-style: none; 
+    color: #ccc; 
+}
+
+.column ul li { 
+    margin-bottom: 12px; 
+    padding-left: 15px; 
+    border-left: 2px solid #333; 
+    transition: 0.3s;
+}
+
+.column ul li:hover {
+    border-left-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+/* Caja de Aplicación de Habilidades */
+.application-box { 
+    background: #111; 
+    padding: 25px; 
+    border-radius: 8px; 
+    border: 1px solid #222; 
+    margin: 30px 0; 
+}
+
+.application-box h3 { 
+    margin-bottom: 10px; 
+    color: var(--primary-color); 
+}
+
+/* Grid de Evidencias (Imágenes) */
+.evidence-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.img-evidencia { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    border: 1px solid #333; 
+    transition: 0.4s ease; 
+}
+
+.img-evidencia:hover { 
+    border-color: var(--primary-color); 
+    transform: scale(1.03); 
+    filter: brightness(1.1);
+}
+
+.evidence-item p { 
+    text-align: center; 
+    font-size: 0.85rem; 
+    margin-top: 10px; 
+    color: #777; 
+    font-style: italic;
+}
+
+/* Separador entre Marketing y Diseño Gráfico */
+.separator { 
+    border: 0; 
+    border-top: 1px solid #222; 
+    margin: 60px 0; 
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA PSICOLOGÍA
+   ========================================= */
+
+/* Color temático para Psicología (puedes ajustarlo si prefieres otro tono) */
+.psicologia-theme {
+    --primary-color: #a29bfe; /* Un tono púrpura/lavanda relacionado con la psicología */
+}
+
+/* Efecto sutil de pulso para las evidencias de esta página */
+.evidence-item img {
+    filter: grayscale(20%);
+    transition: 0.5s ease;
+}
+
+.evidence-item img:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+}
+
+/* Estilo para las listas de habilidades psicofísicas */
+.column ul li {
+    position: relative;
+    padding-left: 25px;
+    border-left: none; /* Quitamos el borde simple anterior */
+}
+
+.column ul li::before {
+    content: '👁️'; /* Icono de ojo para psicología de la visión */
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA MULTIMEDIA
+   ========================================= */
+
+/* Color temático para Multimedia (Cyan/Brillante) */
+.multimedia-highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Ajuste para el grid de evidencias en video (centrado si es uno solo) */
+.info-block:last-of-type .evidence-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.info-block:last-of-type .evidence-item {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Efecto Hover para trabajos de diseño */
+.img-evidencia {
+    filter: saturate(0.8);
+}
+
+.img-evidencia:hover {
+    filter: saturate(1.2);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Estilo para los separadores entre las 3 áreas */
+.separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    margin: 80px 0;
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA 3D Y VR
+   ========================================= */
+
+/* Efecto de brillo tecnológico para los títulos de esta sección */
+.info-block h2 {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+/* Estilo para representar profundidad en las evidencias */
+.evidence-item {
+    perspective: 1000px;
+}
+
+.img-evidencia {
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.img-evidencia:hover {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
+/* Ajuste de lista para destacar herramientas de software */
+.column ul li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
