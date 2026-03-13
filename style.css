@@ -272,3 +272,16 @@ body {
     color: var(--primary-color);
     font-weight: 600;
 }
+
+/* Ajuste para que el video no se salga */
+.video-container-fix {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* Para que combine con tus otras fotos */
+}
+
+.video-evidencia {
+    width: 100%;    /* Obliga al video a respetar el ancho de la columna */
+    height: auto;   /* Mantiene la proporción original */
+    display: block;
+}
